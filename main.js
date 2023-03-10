@@ -11,15 +11,14 @@ const online = window.navigator.onLine;
 //очистка инпута
 input.oninput = function () {
   {
-    input.value
-      ? (document.querySelector('.text-clean').style = 'display:block')
-      : (document.querySelector('.text-clean').style = 'display:none');
+    input.value ? (clean.style = 'display:block') : (clean.style = 'display:none');
   }
 };
 
 clean.onclick = function () {
   input.value = '';
   document.querySelector('.text-clean').style = 'display:none';
+  input.focus();
 };
 //eventListner на форму
 formEl.addEventListener('submit', async (e) => {

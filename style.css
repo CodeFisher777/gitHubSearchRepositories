@@ -1,6 +1,6 @@
 @import './reset.css';
 body {
-  font-family: "Roboto", sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #000000;
@@ -40,6 +40,7 @@ h1 {
   font-size: 32px;
   font-weight: 700;
   padding-bottom: 20px;
+  text-align: center;
 }
 
 .text {
@@ -103,4 +104,4 @@ a {
 }
 a:hover {
   color: blueviolet;
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
