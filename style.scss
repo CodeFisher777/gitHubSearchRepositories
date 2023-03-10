@@ -73,23 +73,28 @@ h1 {
   background-color: blueviolet;
   border-radius: 5px;
   color: white;
+  transition: 0.3s;
+  &:hover {
+    opacity: 0.8;
+  }
 }
-.repositories {
-  &-name {
-    display: flex;
-    justify-content: space-between;
-    font-size: 20px;
-    font-weight: 700;
-    color: #0f0f0fd9;
-  }
-  li {
-    padding-top: 20px;
-  }
-  &-item {
-    display: flex;
-    justify-content: space-between;
-    &-full-name {
-      padding: 0 50px;
-    }
+table {
+  text-align: center;
+  border-spacing: 10px;
+}
+
+th {
+  padding: 5px;
+  border: 1px solid black;
+}
+td {
+  padding: 5px;
+  border: 1px solid black;
+}
+a {
+  color: black;
+
+  &:hover {
+    color: blueviolet;
   }
 }

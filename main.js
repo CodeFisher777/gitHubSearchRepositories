@@ -52,26 +52,23 @@ formEl.addEventListener('submit', async (e) => {
 
 //функция добавления списка
 function createRepoEl(repoData) {
-  const element = document.createElement('ul');
-  const liName = document.createElement('li');
-  element.classList.add('repositories');
-  liName.innerHTML = `<div class="repositories-name">
- <p>Название</p>
- <p>Полное имя</p>
- <p>Владелец</p>
- </div>`;
-  element.appendChild(liName);
+  const table = document.createElement('table');
+  const tbody = document.createElement('tbody');
+  table.appendChild(tbody);
+  const trHead = document.createElement('tr');
+  trHead.innerHTML = ` <th>Название</th><th>Полное имя</th><th>Владелец</th>`;
+  table.prepend(trHead);
   let items = Array.from(repoData).slice(0, 10);
 
   items.forEach((item) => {
-    let li = document.createElement('li');
-    li.innerHTML = `<div class="repositories-item">
- <a target="_blanck" href="${item.html_url}">${item.name}</a>
- <p class="repositories-item-full-name">${item.full_name}</p>
- <p>${item.owner.login}</p>
- </div>`;
-    element.appendChild(li);
-  });
+    const tr = document.createElement('tr');
+    tr.innerHTML = `
 
-  wrapper.appendChild(element);
+   <td><a target="_blanck" href="${item.html_url}">${item.name}</a></td>
+   <td>${item.full_name}</td>
+   <td>${item.owner.login}</td>
+   `;
+    tbody.append(tr);
+  });
+  wrapper.appendChild(table);
 }

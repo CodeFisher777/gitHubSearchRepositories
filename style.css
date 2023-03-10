@@ -77,22 +77,30 @@ h1 {
   background-color: blueviolet;
   border-radius: 5px;
   color: white;
+  transition: 0.3s;
+}
+.search-button:hover {
+  opacity: 0.8;
 }
 
-.repositories-name {
-  display: flex;
-  justify-content: space-between;
-  font-size: 20px;
-  font-weight: 700;
-  color: rgba(15, 15, 15, 0.8509803922);
+table {
+  text-align: center;
+  border-spacing: 10px;
 }
-.repositories li {
-  padding-top: 20px;
+
+th {
+  padding: 5px;
+  border: 1px solid black;
 }
-.repositories-item {
-  display: flex;
-  justify-content: space-between;
+
+td {
+  padding: 5px;
+  border: 1px solid black;
 }
-.repositories-item-full-name {
-  padding: 0 50px;
+
+a {
+  color: black;
+}
+a:hover {
+  color: blueviolet;
 }/*# sourceMappingURL=style.css.map */
