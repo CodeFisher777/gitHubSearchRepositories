@@ -1,6 +1,6 @@
 @import './reset.css';
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-weight: 400;
   font-size: 14px;
   color: #000000;
@@ -31,6 +31,14 @@ body {
   align-items: center;
   height: 100vh;
 }
+.main-head {
+  display: flex;
+  align-items: center;
+}
+.main-logo {
+  width: 30px;
+  padding-right: 5px;
+}
 .main-error {
   color: red;
   font-size: 18px;
@@ -39,12 +47,10 @@ body {
 h1 {
   font-size: 32px;
   font-weight: 700;
-  padding-bottom: 20px;
-  text-align: center;
 }
 
 .text {
-  padding: 8px;
+  padding: 8px 22px;
   margin: 8px;
   border-radius: 5px;
   border: 1px solid black;
@@ -64,7 +70,7 @@ h1 {
 }
 
 .search {
-  margin-bottom: 20px;
+  margin: 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -104,4 +110,4 @@ a {
 }
 a:hover {
   color: blueviolet;
-} /*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
