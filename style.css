@@ -1,0 +1,84 @@
+@import './reset.css';
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: #000000;
+}
+
+.wrapper {
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 10px;
+  padding-bottom: 20px;
+}
+
+.container {
+  max-width: 1000px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.main {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+}
+.main-error {
+  color: red;
+  font-size: 18px;
+}
+
+h1 {
+  font-size: 32px;
+  font-weight: 700;
+  padding-bottom: 20px;
+}
+
+.text {
+  padding: 8px;
+  margin: 8px;
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+.text:focus {
+  border: 1px solid blue;
+}
+
+.search {
+  margin-bottom: 20px;
+}
+
+.search-button {
+  padding: 8px;
+  background-color: blueviolet;
+  border-radius: 5px;
+  color: white;
+}
+
+.repositories-name {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+  font-weight: 700;
+  color: rgba(15, 15, 15, 0.8509803922);
+}
+.repositories li {
+  padding-top: 20px;
+}
+.repositories-item {
+  display: flex;
+  justify-content: space-between;
+}
+.repositories-item-full-name {
+  padding: 0 50px;
+}/*# sourceMappingURL=style.css.map */
