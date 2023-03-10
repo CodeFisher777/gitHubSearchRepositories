@@ -49,12 +49,27 @@ h1 {
   &:focus {
     border: 1px solid blue;
   }
+  &-clean {
+    position: absolute;
+    width: 20px;
+    right: 25px;
+    top: 14px;
+    cursor: pointer;
+    display: none;
+  }
 }
 .search {
   margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &-withclean {
+    position: relative;
+  }
 }
 .search-button {
-  padding: 8px;
+  padding: 8px 20px;
   background-color: blueviolet;
   border-radius: 5px;
   color: white;

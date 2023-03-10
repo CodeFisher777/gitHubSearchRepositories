@@ -4,25 +4,45 @@ const main = document.querySelector('.main');
 const wrapper = document.querySelector('.wrapper');
 const errorMessage = document.createElement('div');
 errorMessage.classList.add('main-error');
+const input = document.querySelector('input');
+const clean = document.querySelector('.text-clean');
+const online = window.navigator.onLine;
 
+//очистка инпута
+input.oninput = function () {
+  {
+    input.value
+      ? (document.querySelector('.text-clean').style = 'display:block')
+      : (document.querySelector('.text-clean').style = 'display:none');
+  }
+};
+
+clean.onclick = function () {
+  input.value = '';
+  document.querySelector('.text-clean').style = 'display:none';
+};
+//eventListner на форму
 formEl.addEventListener('submit', async (e) => {
   e.preventDefault();
   try {
     wrapper.innerHTML = '';
-    const inputValue = document.querySelector('input').value;
+    if (online) {
+      if (input.value.length > 1) {
+        const res = await fetch(`https://api.github.com/search/repositories?q=${input.value}`);
+        const data = await res.json();
 
-    if (inputValue.length > 1) {
-      const res = await fetch(`https://api.github.com/search/repositories?q=${inputValue}`);
-      const data = await res.json();
-
-      if (data.items.length != 0) {
-        createRepoEl(data.items);
+        if (data.items.length != 0) {
+          createRepoEl(data.items);
+        } else {
+          errorMessage.innerHTML = 'Ничего не найдено';
+          wrapper.appendChild(errorMessage);
+        }
       } else {
-        errorMessage.innerHTML = 'Ничего не найдено';
+        errorMessage.innerHTML = 'Недостаточно символов';
         wrapper.appendChild(errorMessage);
       }
     } else {
-      errorMessage.innerHTML = 'недостаточно символов';
+      errorMessage.innerHTML = 'Отсутствует интернет-соединение☹️';
       wrapper.appendChild(errorMessage);
     }
   } catch (err) {
